@@ -62,6 +62,11 @@
   - `lithobench_tf/neuralilt_tf.py`：`UNetTF`
   - `lithobench_tf/cfnoilt_tf.py`：`CFNOTF`（CFNO 核心层）与 `CFNOILTNetTF`（整网）
   - `lithobench_tf/doinn_tf.py`：`RFNOTF`（RFNO 核心层）与 `RFNONetTF`（整网）
+  - `lithobench_tf/ganopc_tf.py`：`GANOPCGeneratorTF` 与 `GANOPCDiscriminatorTF`
+  - `lithobench_tf/lithogan_tf.py`：`LithoGANGeneratorTF` 与 `LithoGANDiscriminatorTF`
+  - `lithobench_tf/damoilt_tf.py`：`DAMOILTGeneratorTF` 与 `DAMOILTDiscriminatorTF`
+  - `lithobench_tf/damolitho_tf.py`：`DAMOLithoGeneratorTF` 与 `DAMOLithoDiscriminatorTF`
+  - `lithobench_tf/cfnolitho_tf.py`：`CFNOLithoNetTF`
   - `lithobench_tf/__init__.py`
 - 已新增轻量对齐测试：
   - `scripts/tf_port_smoke_tests.py`
@@ -71,10 +76,22 @@
     - `CFNOILT net tiny`（缩小配置整网）前向对齐
     - `RFNO core` 前向对齐
     - `RFNONet tiny`（缩小配置整网）前向对齐
+    - `GANOPC generator` 前向对齐
+    - `GANOPC discriminator` 前向对齐
+    - `LithoGAN generator` 前向对齐
+    - `LithoGAN discriminator` 前向对齐
+    - `DAMOILT generator` 前向对齐
+    - `DAMOILT discriminator` 前向对齐（务实阈值）
+    - `DAMOLitho generator` 前向对齐
+    - `DAMOLitho discriminator` 前向对齐
+    - `CFNOLitho net tiny` 前向对齐
 
 ## 6) 下一步执行清单（按顺序）
 - [x] 跑通 `scripts/tf_port_smoke_tests.py` 并记录 MAE/MAX
 - [x] 完整迁移 `CFNOILT`（整网）+ 小规模前向对齐
 - [x] 完整迁移 `DOINN` 的 `RFNO/RFNONet` + 前向对齐
-- [ ] 迁移 `GANOPC` 生成器/判别器 + 单步 loss 对齐（不做长训练）
-- [ ] 迁移 `LithoGAN`（共享模块复用）+ 双输出对齐
+- [x] 迁移 `GANOPC` 生成器/判别器 + 前向对齐测试
+- [x] 迁移 `LithoGAN`（共享模块复用）+ 双输出对齐
+- [x] 迁移 `DAMOILT` + 前向对齐测试
+- [x] 迁移 `DAMOLitho` + 前向对齐测试
+- [x] 迁移 `CFNOLitho` + 前向对齐测试
