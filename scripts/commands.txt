@@ -33,3 +33,6 @@ tail -f log/ViaSetLithoGAN.log
 tail -f log/ViaSetDOINN.log
 tail -f log/ViaSetCFNOLitho.log
 tail -f log/ViaSetDAMOLitho.log
+
+scripts/runTFPortSmoke.sh
+scripts/runTFTrainingSmoke.sh
