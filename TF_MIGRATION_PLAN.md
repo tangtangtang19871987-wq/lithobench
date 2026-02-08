@@ -85,6 +85,9 @@
     - `DAMOLitho generator` 前向对齐
     - `DAMOLitho discriminator` 前向对齐
     - `CFNOLitho net tiny` 前向对齐
+- 已新增训练路径烟测：
+  - `scripts/tf_training_smoke_tests.py`
+  - 覆盖各 TF 端口 1 step 前向+反向+优化器更新（含复数梯度检查）
 
 ## 6) 下一步执行清单（按顺序）
 - [x] 跑通 `scripts/tf_port_smoke_tests.py` 并记录 MAE/MAX
